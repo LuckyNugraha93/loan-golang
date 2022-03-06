@@ -1,0 +1,12 @@
+{{ define "Edit" }}
+  {{ template "Header" }}
+    {{ template "Menu" }} 
+   <h2>Edit Loan</h2>  
+    <form method="POST" action="update">
+      <input type="hidden" name="uid" value="{{ .Id }}" />
+      <label> Name </label><input type="text" name="name" value="{{ .Name }}"  /><br />
+      <label> Amount </label><input type="number" name="amount" value="{{ .Amount }}"  /><br />
+      <input type="submit" value="Save Loan" />
+    </form><br />    
+  {{ template "Footer" }}
+{{ end }}
